@@ -1,0 +1,95 @@
+body, h1, h2, h3, h4, ul, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: blueviolet;
+}
+
+header h1 {
+    width: 25%;
+}
+
+header nav {
+    width: 75%;
+}
+
+nav ul {
+    margin-top: 10px;
+    float: right;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.float-left { 
+    float: left;
+}
+
+.hero-bg-parent {
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-section {
+    position: relative;
+}
+
+.overlay {
+    width: 100%;
+    height: 500px;
+    background: rgb(0 0 0 / 50%);
+    position: absolute;
+    top: 0;
+}
+
+.hero-content {
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.hero-content h1, .hero-content p, .hero-content a {
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 16px;
+}
+.hero-content a {
+    padding: 15px 30px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    margin-top: 25px;
+}
