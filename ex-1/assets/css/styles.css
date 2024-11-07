@@ -3,9 +3,18 @@ body, h1, h2, h3, h4, ul, p, a {
     padding: 0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 a {
     text-decoration: none;
     display: inline-block;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 header {
@@ -93,3 +102,59 @@ nav ul li a {
     border-radius: 10px;
     margin-top: 25px;
 }
+.cards-parents {
+    padding: 75px 0;
+    width: 100%;
+}
+
+.card {
+    width: 32.3%;
+    margin-right: 1%;
+    padding: 10px;
+    box-shadow: 0 0 7px rgb(0 0 0 / 40%);
+    min-height: 410px;
+}
+
+.card h2 {
+    margin: 15px 0;
+}
+
+.stats {
+    width: 100%;
+    padding: 150px 0;
+    background-image: url(../images/stats-bg.jpg);
+    background-repeat: no-repeat;
+    background-color: beige;
+    position: relative;
+}
+
+.stats::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgb(0 0 0 / 50%);
+    position: absolute;
+    top: 0;
+}
+
+.stats .stats-item {
+    width: 33%;
+    text-align: center;
+}
+.stats h3 {
+    font-size: 46px;
+}
+.stats h4 {
+    font-size: 20px;
+}
+
+.stats h3, .stats h4 {
+    color: #fff;
+}
+
+.stats-items {
+    position: relative;
+    z-index: 1;
+}
+
