@@ -158,3 +158,100 @@ nav ul li a {
     z-index: 1;
 }
 
+.w-50 {
+    width: 50%;
+}
+
+.about-us {
+    width: 100%;
+    padding: 100px 0;
+}
+
+.about-img {
+    max-height: 480px;
+    overflow: hidden;   
+}
+
+.about-content {
+    padding-left: 20px;
+}
+
+.about-content h2 {
+    font-size: 28px;
+}
+
+.about-content p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.about-content a, footer button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: black;
+    border-radius: 4px;
+    color: #fff;
+    border: 1px solid black;
+}
+
+.about-content a:hover, footer button:hover  {
+    border: 1px solid black;
+    background-color: #fff;
+    color: black;
+}
+
+footer {
+    width: 100%;
+    background-color: blueviolet;
+    padding: 30px 0;
+
+}
+
+.w-25 {
+    width: 25%;
+}
+
+footer h1, footer p, footer ul li a, footer label {
+    color: #fff;
+}
+
+footer p, footer ul, footer form  {
+    margin-top: 15px;
+}
+
+footer ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+footer label, footer input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+footer input {
+    border-color: #eee;
+    height: 32px;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+footer button {
+    margin-top: 0 !important;
+    cursor: pointer;
+}
+.f-menu {
+    text-align: center;
+}
+
+.footer-widget {
+    float: right;
+    width: 75%;
+}
+
+
+
+
+
