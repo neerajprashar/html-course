@@ -10,3 +10,13 @@
     font-size: 46px;
 
 }
+
+.border-bottom-custom {
+    border-bottom: 2px solid #000 !important;
+    border-radius: 0 !important;
+}
+
+.strategy-image {
+    max-height: 752px;
+    overflow: hidden;
+}
