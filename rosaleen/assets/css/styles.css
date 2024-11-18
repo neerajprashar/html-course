@@ -20,3 +20,23 @@
     max-height: 752px;
     overflow: hidden;
 }
+.subscribe-textfield {
+    height: 50px;
+}
+.subscribe-textfield::placeholder {
+    color: #fff !important;
+    opacity: 1;
+}
+.card-dot {
+    vertical-align: text-bottom;
+}
+.space-between {
+    justify-content: space-between;
+}
+.price-badge {
+    width: 75px;
+    height: 75px;
+    padding: 32px 0 !important;
+    right: 30px;
+    bottom: -35px;
+}
