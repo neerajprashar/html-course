@@ -29,3 +29,15 @@ header li a, button {
 .hero-form input {
     height: 46px;
 }
+.section-background {
+    background-color: #F7F7F7;
+}
+
+.section-title {
+    color: #2e1b6a;
+    font-weight: bold;
+    font-size: 35px;
+}
+.color-gold {
+    color: #ffa726;
+}
