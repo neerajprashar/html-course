@@ -10,19 +10,31 @@
     </body>
     <script type="text/Javascript">
 
-        let number = 3000;
+    let ticketType = 'C';
 
-        if(number % 2 == 0) {
-            console.log("Number is Even");
-        } else {
-            console.log("Number is Odd");
-        }
+    let numberOfTickets = 20;
 
-        if(number % 4 == 0) {
-            console.log("It's a leap year");
-        } else {
-            console.log("Not a leap year");
-        }
+    let price = 0;
+    let charity = 0;
+
+
+    if(ticketType == 'A') {
+        price = 200;
+        charity = 20;
+
+    } else if(ticketType == 'B') {
+        price = 150;
+        charity = 15;
+
+    } else {
+        price = 100;
+        charity = 10;
+
+    }
+
+    console.log("Charity for ticket "+ ticketType + " is " + (price * numberOfTickets ) * (charity/100));
+
+
 
 
 
