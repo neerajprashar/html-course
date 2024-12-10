@@ -10,31 +10,23 @@
     </body>
     <script type="text/Javascript">
 
-    let ticketType = 'C';
-
-    let numberOfTickets = 20;
-
-    let price = 0;
-    let charity = 0;
+        let a = 150;
+        let b = 50;
+        let c = 5000;
 
 
-    if(ticketType == 'A') {
-        price = 200;
-        charity = 20;
 
-    } else if(ticketType == 'B') {
-        price = 150;
-        charity = 15;
+        let first50Price = 3;
+        let second50Price = 4;
 
-    } else {
-        price = 100;
-        charity = 10;
-
-    }
-
-    console.log("Charity for ticket "+ ticketType + " is " + (price * numberOfTickets ) * (charity/100));
-
-
+        let firstUnits = units - 100;
+        let remainingBillSum = firstUnits * 5;
+        let firstBillUnits = units - firstUnits;
+        let firstBillSum = firstBillUnits / 2;
+        let firstBillSum1 = firstBillSum * first50Price;
+        let firstBillSum2 = firstBillSum * second50Price;
+        let sum = remainingBillSum + firstBillSum1 + firstBillSum2;
+        console.log("Sum is "+ sum);
 
 
 
