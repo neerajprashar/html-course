@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions in Javascript</title>
+
+    </head>
+
+    <body>
+
+    </body>
+    <script type="text/Javascript">
+
+        function getDayDifference(date1, date2) {
+
+
+            const oneDay = 24 * 60 * 60 * 1000; // milliseconds in one day
+            const firstDate = new Date(date1);
+            const secondDate = new Date(date2);
+
+            const diffInTime = Math.abs(secondDate - firstDate);
+            const diffInDays = Math.ceil(diffInTime / oneDay);
+
+            return diffInDays;
+        }
+
+        // const totalkm = 100;
+        // let convered = 0;
+        // for (let index = 100; index > 0; index--) {
+        //     convered++;
+        //     console.log("Left Km ", totalkm-convered);
+        // }
+        const day = 27;
+        const month = 12;
+        const date1 = 2024 + "-"+ month + "-" +day;
+
+        const date2 = "2024-12-31";
+        const dayDiff = getDayDifference(date1, date2);
+        console.log("dayDiff ",dayDiff);
+
+
+
+
+    </script>
+</html>

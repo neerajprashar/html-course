@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo Application</title>
+
+    </head>
+
+    <body>
+
+    </body>
+    <script type="text/Javascript">
+
+        const tasks = [];
+
+
+        function addTask(todo) {
+            tasks.push({ name: todo, completed: false }) // Library Function
+            console.log(`Task "${todo}" added.`);
+        }
+
+        function completeTask(taskIndex) {
+           
+            if (taskIndex >= 0 && taskIndex < tasks.length) {
+                tasks[taskIndex].completed = true;
+                console.log(`Task "${tasks[taskIndex].name}" marked as completed.`);
+            } else {
+                console.log("Invalid task index.");
+            }
+
+        }
+
+        function viewTasks() {
+            if (tasks.length === 0) {
+                console.log("No tasks to display.");
+            } else {
+                console.log("\nTo-Do List:");
+                for (let i = 0; i < tasks.length; i++) {
+                    const status = tasks[i].completed ? "✔" : "✘";
+                    console.log(`${i + 1}. [${status}] ${tasks[i].name}`);
+                }
+            }
+        }
+
+        function deleteTask(taskIndex) {
+            if (taskIndex >= 0 && taskIndex < tasks.length) {
+                const removedTask = tasks.splice(taskIndex, 1);
+                console.log(`Task "${removedTask[0].name}" deleted.`);
+            } else {
+                console.log("Invalid task index.");
+            }
+        }
+
+    // Main program loop
+    function runToDoList() {
+        let exit = false;
+
+        while (!exit) {
+            console.log("\nWhat would you like to do?");
+            console.log("1. Add Task");
+            console.log("2. Complete Task");
+            console.log("3. View Tasks");
+            console.log("4. Delete Task");
+            console.log("5. Exit");
+
+            const choice = parseInt(prompt("Enter your choice:"));
+
+            if (choice === 1) {
+                const taskName = prompt("Enter the task name:");
+                addTask(taskName);
+            } else if (choice === 2) {
+                viewTasks();
+                const taskIndex = parseInt(prompt("Enter the task number to complete:")) - 1;
+                completeTask(taskIndex);
+            } else if (choice === 3) {
+                viewTasks();
+            } else if (choice === 4) {
+                viewTasks();
+                const taskIndex = parseInt(prompt("Enter the task number to delete:")) - 1;
+                deleteTask(taskIndex);
+            } else if (choice === 5) {
+                exit = true;
+                console.log("Exiting To-Do List Manager. Goodbye!");
+            } else {
+                console.log("Invalid choice. Please try again.");
+            }
+        }
+    }
+
+    runToDoList();
+
+
+
+    </script>
+</html>
