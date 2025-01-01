@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learn JQuery</title>
+
+        <style>
+            #panel {
+                display: none;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <h1>Hello there, Happy New Year 2025. May god fullfill your all the dreams</h1>
+        <button id="btn">Toggle</button>
+
+        <div id="flip">Click to slide down panel</div>
+        <div id="panel">Hello world!</div>
+    
+
+
+    </body>
+    <script src="./jquery.js"></script>
+    <script type="text/Javascript">
+
+        $(document).ready(function() {
+
+            $("#btn").click(function() {
+                $("h1").fadeToggle(5000);
+            });
+
+            $("#flip").click(function() {
+                $("#panel").slideDown();
+            });
+
+
+
+
+
+
+
+        }) ;
+
+
+
+    </script>
+</html>
