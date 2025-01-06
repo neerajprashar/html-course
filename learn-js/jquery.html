@@ -7,18 +7,37 @@
             #panel {
                 display: none;
             }
+
+            #box {
+                width: 150px;
+                height: 150px;
+                background-color: palegreen;
+                position: relative;
+            }
         </style>
 
     </head>
 
     <body>
 
-        <h1>Hello there, Happy New Year 2025. May god fullfill your all the dreams</h1>
+        <!-- <h1>Hello there, Happy New Year 2025. May god fullfill your all the dreams</h1>
         <button id="btn">Toggle</button>
 
         <div id="flip">Click to slide down panel</div>
         <div id="panel">Hello world!</div>
-    
+
+        <button id="animateBtn">Click Here to animate</button>
+        <button id="stopBtn">Click Here to stop</button>
+
+        <div id="box">Animation</div>
+
+        <button id="pbutton">Click Here</button>
+        <p>Happy New Year</p>
+     -->
+
+     <h1>My name is <span>Sahil</span></h1>
+
+     <input type="text" id="name" value="sahil" />
 
 
     </body>
@@ -27,13 +46,41 @@
 
         $(document).ready(function() {
 
-            $("#btn").click(function() {
-                $("h1").fadeToggle(5000);
-            });
+            const h1Value = $("h1 span").text();
+            const nameValue = $("#name").val();
 
-            $("#flip").click(function() {
-                $("#panel").slideDown();
-            });
+
+            if(h1Value == "Neeraj") {
+                alert("Hello Neeraj");
+            }
+
+
+            console.log(nameValue);
+
+            // $("#btn").click(function() {
+            //     $("h1").fadeToggle(5000);
+            // });
+
+            // $("#flip").click(function() {
+            //     $("#panel").slideDown();
+            // });
+
+            // $("#animateBtn").click( function() {
+
+            //     $("#box").animate({left: '400px'}, 3000);
+
+            // });
+
+            // $("#stopBtn").click(function(){
+            //     $("#box").stop();
+            // });
+
+
+            // $("#pbutton").click(function(){
+            //     $("p").hide("slow", function(){
+            //         alert("The paragraph is now hidden");
+            //     });
+            // });
 
 
 

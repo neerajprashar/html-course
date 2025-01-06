@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Train</title>
+
+        <style>
+            #train {
+                width: 200px;
+                height: 100px;
+                display: inline-block;
+                background-color: black;
+                position: relative;
+
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <button id="start">Start Train</button>
+        <button id="stop">Stop Train</button>
+        <div id="train">Train</div>
+
+    </body>
+    <script src="./jquery.js"></script>
+
+    <script type="text/Javascript">
+
+        $(document).ready(function() {
+
+            $("#start").click(function() {
+              
+                $("#train").animate({left: '1000px'}, 3000);
+            });
+            $("#stop").click(function() {
+     
+
+                $("#train").stop();
+            })
+        });
+       
+
+
+    </script>
+</html>
