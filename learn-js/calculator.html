@@ -76,54 +76,49 @@
     <script type="text/Javascript">
 
    
-    $(document).ready(function() {
+$(document).ready(function () {
+    let currentInput = ""; 
+    let item1 = null;
+    let item2 = null;
+    let operation = "";
 
-        let value = 0;
-        let item1 = 0;
-        let item2 = 0;
+    $(".numeric").click(function () {
+        currentInput += $(this).text();
+        $("#result").val(currentInput);
+    });
 
-        let operation = "";
+    $(".operation").click(function () {
+        if (currentInput !== "") {
+            item1 = parseFloat(currentInput); // Store the first number
+            currentInput = ""; // Clear input for the next number
+        }
+        operation = $(this).data("op"); // Get the selected operation
+    });
+
+    $(".result").click(function () {
+        if (currentInput !== "") {
+            item2 = parseFloat(currentInput); // Store the second number
+        }
         let result = 0;
 
+        switch (operation) {
+            case "addition":
+                result = item1 + item2;
+                break;
+            case "minus":
+                result = item1 - item2;
+                break;
+            default:
+                result = "Error"; // Handle invalid operations
+        }
 
-        $(".numeric").click(function() {
-
-            value = $(this).text();
-            if(item1 == 0) {
-                item1 = value;
-            } else {
-                item2 = value;
-            }
-           
-        });
-
-        $(".operation").click(function() {
-            operation = $(this).data("op");
-        });
-
-        $(".result").click(function() {
-
-            switch (operation) {
-                case "addition":
-                    if(item1 != 0 && item2 != 0) {
-                        result = parseInt(item1) + parseInt(item2);
-                    }
-                    break;
-                case "minus":
-                    if(item1 != 0 && item2 != 0) {
-                        result = parseInt(item1) - parseInt(item2);
-                    }
-                    break;
-                default:
-                    break;
-            }
-            $("#result").val(result);
-            item1 = item2 = 0;
-        });
-
-
+        $("#result").val(result); // Display the result
+        currentInput = ""; // Clear input
+        item1 = null; // Reset for next calculation
+        item2 = null;
+        operation = ""; // Reset operation
     });
-       
+});
 
 
     </script>
